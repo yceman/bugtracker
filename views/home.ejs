@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <title>Bugtracker</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--navegador + relógio-->
+        <script>
+            document.onreadystatechange = () => {
+                if(document.readyState === 'interactive') {
+                    document.getElementById('userAgent').value = window.navigator.userAgent
+                    document.getElementById('userDate').value = new Date()
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">BugTracker</a>
+            </div>
+            
+        </nav>
+        <h1>Ferramenta de Report de Bugs</h1>
+        <p>Preencha todos os dados a seguir:</p>
+        <div class="row">
+            <form class="col s12" method="POST" action="">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="name" type="text" class="validate" name="name" />
+                        <label for="name">Name:</label>
+                        <!--<input placeholder="Placeholder" id="name" type="text" class="validate" name="name" />-->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">email</i>
+                        <input id="email" type="email" class="validate" name="email" />
+                        <label for="email">Email:</label>
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="input-field col s12">
+                            <!--<i class="material-icons prefix">report</i>-->
+                            <!--<label for="issueType">Classificação:</label>-->
+                            <select class="browser-default" name="issueType" id="issueType">
+                                <option value="" disabled selected>Classificação:</option>
+                                <option value="BUG">Falha</option>
+                                <option value="CRITICAL">Crítico</option>
+                                <option value="ENHANCEMENT">Melhoria</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">report</i>
+                            <input id="howToReproduce" type="text" class="validate" name="howToReproduce" />
+                            <label for="howToReproduce">Como produzir esse erro?</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">mood</i>
+                            <textarea class="materialize-textarea" name="expectedOutput" id="expectedOutput"></textarea>
+                            <label for="expectedOutput">A saída esperada?</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">mood_bad</i>
+                            <textarea class="materialize-textarea" name="receivedOutput" id="receivedOutput"></textarea>
+                            <label for="receivedOutput">A saída recebida?</label>
+                        </div>
+                    </div>
+                    <input type="hidden" id="userAgent" name="userAgent" />
+                    <input type="hidden" id="userDate" name="userDate" />
+
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Enviar solicitação!
+                        <i class="material-icons right">send</i>
+                    </button>
+            </form>
+        </div>
+        <!--<form method="POST" action="">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" />
+            <label for="issuteType">Classificação:</label>
+            <select name="issueType" id="issueType">
+                <option value="">Selecione</option>
+                <option value="BUG">Falha</option>
+                <option value="CRITICAL">Crítico</option>
+                <option value="ENHANCEMENT">Melhoria</option>
+            </select>-->
+            <!--<input type="text" id="issueType" name="issueType" />-->
+            <!--<label for="howToReproduce">Como produzir esse erro?</label>
+            <input type="text" id="howToReproduce" name="howToReproduce" />
+            <label for="expectedOutput">A saída esperada?</label>
+            <input type="text" id="expectedOutput" name="expectedOutput" />
+            <label for="receivedOutput">A saída recebida?</label>
+            <input type="text" id="receivedOutput" name="receivedOutput" />-->
+
+            <!--<input type="hidden" id="userAgent" name="userAgent" />-->
+            <!--<input type="hidden" id="userDate" name="userDate" />-->
+
+            <!--<a class="waves-effect waves-light btn">Enviar solicitação!</a>-->
+            <!--<button type="hidden"><a class="waves-effect waves-light btn">Enviar solicitação!</a></button>-->
+            <!--<a class="waves-effect waves-light btn" type="submit">Enviar solicitação!</a>-->
+            <!--<button class="btn waves-effect waves-light" type="submit" name="action">Enviar solicitação!
+                <i class="material-icons right">send</i>
+            </button>-->
+            <!--<button>Enviar solicitação!</button>-->
+        </form>
+        <script src="jquery-3.3.1.min.js"></script>
+        <script src="scrollspy.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </body>
+</html>

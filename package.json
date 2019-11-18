@@ -1,0 +1,34 @@
+{
+  "name": "bugtracker",
+  "version": "1.0.0",
+  "description": "React App to report a bugs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "yarn index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yceman/bugtracker.git"
+  },
+  "keywords": [
+    "React",
+    "App",
+    "Report",
+    "Bugs",
+    "Spredsheet"
+  ],
+  "author": "Marcos Morais",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yceman/bugtracker/issues"
+  },
+  "homepage": "https://github.com/yceman/bugtracker#readme",
+  "dependencies": {
+    "@sendgrid/mail": "^6.4.0",
+    "body-parser": "^1.19.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "google-spreadsheet": "^2.0.8"
+  }
+}
