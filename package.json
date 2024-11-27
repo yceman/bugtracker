@@ -25,10 +25,10 @@
   },
   "homepage": "https://github.com/yceman/bugtracker#readme",
   "dependencies": {
-    "@sendgrid/mail": "^6.4.0",
+    "@sendgrid/mail": "^8.1.4",
     "body-parser": "^1.19.0",
     "ejs": "^2.7.1",
     "express": "^4.17.1",
-    "google-spreadsheet": "^2.0.8"
+    "google-spreadsheet": "^4.1.4"
   }
 }
