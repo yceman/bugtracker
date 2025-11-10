@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "React App to report a bugs",
   "main": "index.js",
+  "license": "MIT",
+  "rootDir": "src",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "yarn index.js"
+    "start": "yarn run index.js"
   },
   "repository": {
     "type": "git",
